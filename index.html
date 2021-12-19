@@ -1,14 +1,38 @@
-sample.html
 <!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>Slack Sample</title>
+    <title>Slack出退勤ツール</title>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="kintai.js"  charset="UTF-8"></script>
 </head>
 <body>
-    <a href="#" class="slack-submit">Post to Slack!</a>
-
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="kintai.js"></script>
+    クイック入力
+	<br>
+	クイック入力はよく使用するメッセージをワンクリックでslackに投稿できます。
+	<br>
+	<input type="radio" name="place" value="在宅">在宅
+	<input type="radio" name="place" value="社内" checked>社内
+	<br>
+	<input type="button" id="workStart" value="出勤">
+	<input type="button" id="workEnd"   value="退勤">
+	<input type="button" id="restStart" value="お昼休憩開始">
+	<input type="button" id="restEnd"   value="業務再開">
+	<input type="button" id="restOther"   value="離席">
+	<br>
+	<input type="text" id="hour">時
+	<br>
+	<input type="text" id="minutes">分
+	<br>
+	名前<input type="text" id="name">
+	<br>
+	カスタム入力
+	<br>
+	カスタム入力は自由な内容をslackに投稿できますが、多分直接slackに入力した方が早いです。
+	<br>
+	<input type="button" id="custom"   value="送信">
+	<br>
+	<input type="text" id="customMessage"   value="">
+	
 </body>
 </html>
